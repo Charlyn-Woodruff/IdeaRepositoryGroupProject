@@ -1,1 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Idea Repository</title>
+        <meta charset="utf-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amethysta&family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Domine:wght@400..700&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lilita+One&family=Luckiest+Guy&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Roboto+Slab:wght@100..900&family=Rosarivo:ital@0;1&family=Sahitya:wght@400;700&family=Special+Elite&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="assets/styles.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <header>
+            <h1>Idea Repository</h1>
+            <search>
+		<form action="/searchIdeasProcess.php" method="POST" >
+                    <label style="margin:5px 35px 8px 0px">Search Ideas: </label><input type="text" name="language"  title="Enter valid Search" pattern="[A-Za-z ]{1,30}" placeholder="Search" required>
 
+                    <!-- This is the submit button to submit the information in the form and the reset button to clear all information in the form-->
+                    <input type="submit" value="Search" id="Search" style="margin-left:10px">            
+		</form>   
+            </search>
+        </header>
+        <nav>
+            <ul>
+                <li>
+                    <img src="images/profileTest.jpg" alt="Avatar Logo" width="50">
+                    <a href="#">Clark Kent</a>
+                </li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Ideas</a></li>
+                <li><a href="#">Create New</a></li>
+                <li><a href="#">Browse</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+        </nav>
+        <main>
+            <article>
+                <header>
+                    <img src="images/profileTest.jpg" alt="Avatar Logo" width="50">
+                    <p>Clark Kent</p>
+                    <time datetime="2024-10-31">10/31/24</time>
+                    <h2>France Doesn't Exist</h2>
+                </header>
+                <p>This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. </p>
+                <p>This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. </p>
+                <p>This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. </p>
+                <img src="imageTest.jpg" alt="An image for testing" width="50">
+                <p>This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. This is a paragraph of text for the above idea. </p>
+            </article>
+        </main>
+        <aside>
+            <p>This will be soemthing</p>
+        </aside>
+        <footer>
+            <p>Footer Stuff</p>
+        </footer>
+    </body>
+</html>
