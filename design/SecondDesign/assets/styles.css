@@ -1,0 +1,249 @@
+/*
+Color Scheme: 
+    $jet: rgba(53, 53, 53, 1);
+    $caribbean-current: rgba(60, 110, 113, 1);
+    $white: rgba(255, 255, 255, 1);
+    $platinum: rgba(217, 217, 217, 1);
+    $indigo-dye: rgba(40, 75, 99, 1);
+
+Font Family:
+
+    title: Sahitya
+    sub titles: PT Sans
+    normal text: Crimson Text
+
+Note: 
+    All section elements or elements with the class sectionStyles will be displayed in the shadowed box with rounded corners.
+
+*/
+body{
+    font-family: 'Crimson Text';
+}
+p{
+    font-family: 'Crimson Text';
+    
+}
+h2, h3, h4, h5{
+    font-family: 'PT Sans';
+}
+html, body, main{
+    background-color: rgba(217, 217, 217, 1);
+    padding: 0;
+    margin: 0;
+}
+#banner{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    background-color: rgba(40, 75, 99, 1);
+    height: 10%;
+    box-shadow: 2px 2px 5px rgba(53, 53, 53, 1);
+}
+#title{
+    font-family: 'Sahitya';
+    font-weight: bold;
+    color: white;
+    font-variant:small-caps;
+    text-shadow: 3px 3px 3px rgba(53, 53, 53, 1),-3px -3px 3px rgba(53, 53, 53, 1), 0px 0px 10px rgba(60, 110, 113, 1);
+    font-size: 2.9em;
+    margin: 0;
+    padding: 0;
+    
+}
+#search{
+    margin: 5px;
+    text-align: right;
+}
+#verticalNav{
+    height: 100%;
+    position: fixed;
+    width: 15%;
+    
+    
+}
+#verticalNav div, #verticalNav div ul{
+    width: 100%;
+    padding:0;
+    margin:0;
+}
+#verticalNav div ul{
+    vertical-align: top;
+}
+
+#verticalNav div ul li{
+    background-color: white;
+    width: 100%;
+
+
+}
+#content{
+    position: absolute;
+    right: 0;
+    width: 84%;
+    padding-left: 15px;
+
+}
+main{
+    margin: auto;
+    margin-top: 80px;
+    width: 98%;
+    
+}
+section, .sectionStyle{
+    
+    background-color: white;
+    border-radius: 15px;
+    padding: 1em;
+    box-shadow: 0px 0px 5px rgba(53, 53, 53, 1), 0px 0px 10px rgba(40, 75, 99, 1);
+    margin: auto;
+   
+}
+.column{
+    padding: .3em;
+}
+.ideaHeader h2{
+    font-weight: bold;
+    font-size: 2em;
+    font-variant:small-caps;
+    margin: 5px;
+    vertical-align:super;
+    text-align: right;
+}
+
+.ideaHeader h3{
+    vertical-align:bottom;
+}
+.line{
+    height: 2px;
+    background-color: rgba(40, 75, 99, 1);
+    box-shadow: 0px 0px 4px rgba(53, 53, 53, 1);
+    border-radius: 3px;
+    width: 90%;
+    margin:auto;
+    margin-top: 3px;
+}
+.flex-container{
+    display: flex;
+    flex-direction: row;
+}
+.profile{
+    border-radius: 30%;
+    margin-top: 5px;
+}
+.profileName{
+    vertical-align:text-bottom;
+    font-size: 1.2em;
+    
+    font-weight: bold;
+}
+.postProfileDate, .profileName{
+    margin: 0;
+    padding:0;
+}
+
+.columnThree{
+    margin-left: 12px;
+}
+#navTwo{
+    visibility:hidden;
+}
+#displayTwo{
+    display: none;
+    visibility: hidden;
+}
+.ideaPeek{
+    list-style-type: none;
+    padding: 1em;
+    font-size: 1.3em;
+    font-family: "PT Sans";
+
+}
+.ideaPeek:hover{
+    box-shadow: 0px 0px 5px black, 0px 0px 10px rgba(40, 75, 99, 1), 0px 0px 20px rgba(60, 110, 113, 1);
+}
+@media screen and (max-width: 992px){
+    #columnThree{
+        visibility: hidden;
+        display: none;
+        width: 0;
+    
+}
+}
+@media screen and (max-width: 850px){
+
+    #navTwo{
+        visibility: visible;
+        display: block;
+        padding: 0;
+        margin: 0;
+      
+    }
+    #navTwo div ul li a{
+        color: white;
+        
+    }
+    #banner{
+        height: 15%;
+    }
+    #verticalNav{
+        visibility: hidden;
+        display: none;
+    }
+    #content{
+        width: 100%;
+        position: static;
+        margin: auto;
+        padding-left: 0;
+        margin-left:0;
+    }
+    #search{
+        visibility:hidden;
+        display: none;
+    }
+    #searchCol{
+        display: none!important;
+    }
+    main{
+        padding: 10px;
+        width: 100%;
+        margin-top:90px;
+    }
+    
+}
+@media screen and (max-width: 565px){
+    #displayOne{
+        display: none;
+        visibility: hidden;
+    }#displayTwo{
+        color:hotpink;
+        display: block;
+        visibility: visible;
+        margin: 0;
+        padding:0;
+        margin:auto;
+    }#displayTwo ul li a{
+        color: white;
+        text-align: center;
+        font-size: 1.2em;
+        margin: 0;
+        padding: 0;
+
+    }
+    #displayTwo ul li{
+        padding: 0;
+        margin: 0;
+        margin: auto;
+    }
+    #displayTwo ul{
+        margin: auto;
+        margin-right: 0;
+    }
+    
+    #title{
+        width: 100%;
+        text-align: center;
+    }
+    main{
+        margin-top: 110px;
+    }
+}
