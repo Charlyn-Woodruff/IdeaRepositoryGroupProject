@@ -9,7 +9,7 @@ $mainContent .= "<section>";
         // These lines declare the new variables with the sanitized data value from the function test_input
         //$userName = test_input($_POST["username"]); 
         $sanitizedPost = sanitizeAssocArray($_POST);
-	$creatorUserId = $sanitizedPost["user-id"];
+		$creatorUserId = $sanitizedPost["user-id"];
         $title = $sanitizedPost["title"];
         $today = date_format(new DateTime(), "Y-m-d");
         $summary = $sanitizedPost["summary"];
