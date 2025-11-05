@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- Sean Lauritzen, October 11th 2024 -->
+<html lang="en">
+    <head>
+        <title>Idea Repository</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sean Lauritzen">
+        <style>
+            code {color: rgb(0, 255, 0); background-color: #333;}
+        </style>
+    </head>
+    <body>
+        <h1>Allow Shared Edits by Default</h1>
+        <p>By default, files you create cannot be edited by others. To permanently allow others to edit your files in the <code>idea-repository</code> folder, do the following:</p>
+        <ul>
+            <li>Open a terminal.</li>
+            <li>Run the command: <code>export EDITOR=nano &amp;&amp; crontab -e</code></li>
+            <li>Paste the following on 2 lines (you can't use <kbd>ctrl+v</kbd>): <br><code>* * * * * chmod 775 -R /var/www/html/idea-repository/*<br>* * * * * chgrp -R idea /var/www/html/idea-repository/*</code></li>
+            <li><kbd>ctrl+o</kbd> to save.</li>
+            <li><kbd>Enter</kbd> to confirm.</li>
+            <li><kbd>ctrl+x</kbd> to exit.</li>
+        </ul>
+        <h2>Verify</h2>
+        <p>Run <code>crontab -l</code> and it should output <code>* * * * * chmod 775 -R /var/www/html/idea-repository/* &amp;&amp; chgrp -R idea /var/www/html/idea-repository/*</code></p>
+    </body>
+</html>

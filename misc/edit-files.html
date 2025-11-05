@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Sean Lauritzen, October 11th 2024 -->
+<html lang="en">
+    <head>
+        <title>Idea Repository</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Sean Lauritzen">
+    </head>
+    <body>
+        <h1>Editing Files on the Web Server</h1>
+        <p>The Idea Repository code lives at <code>/var/www/html/idea-repository</code> on the CIT web server.</p>
+        <h2>Linux</h2>
+        <p>If you are using Linux, your file manager should be able to mount the files onto a local folder. Google "connect to SFTP share [Linux distribution name]" and you should be able to find it. From there, you can open it just like a normal folder in VSCode.</p>
+        <h2>Windows</h2>
+        <ol>
+            <li>Download <a href="https://winscp.net/eng/index.php" target="_blank">WinSCP</a></li>
+            <li>Once it is installed, open it enter the server connection details:
+                <ul>
+                    <li>Protocol: SFTP</li>
+                    <li>Host: cit.wvncc.edu</li>
+                    <li>Port: 2080</li>
+                </ul>
+            </li>
+            <li>After selecting "Login" and entering your password, navigate to <code>/var/www/html/idea-repository.</code></li>
+            <li>Now you will need a folder to download the code into. Create one at <code>\Desktop\idea-repository</code> or similar.</li>
+            <li>Back in WinSCP, use <kbd>Ctrl+S</kbd> to save into the folder you just created.</li>
+            <li><strong>Select "Local" as the target directory</strong> and click "OK" to both dialog boxes.</li>
+            <li>Open the target directory in VSCode and <strong>make sure it is up to date with the server</strong>.</li>
+            <li>In WinSCP, Press <kbd>Ctrl+U</kbd> to sync your folder with the server.</li>
+            <li>Click "Start" to link your local folder with the server.</li>
+            <li>Back in VSCode, changes made to your folder will transfer to the server automatically.</li>
+        </ol>
+        <h2>Multiple Users</h2>
+        <p><strong>Multiple users cannot edit the same sime simultaneously</strong>. You may override each other's edits! We may need to use Git or have designated edit times.</p>
+    </body>
+</html>

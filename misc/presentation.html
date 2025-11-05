@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>The Idea Repository</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                width: 30in;
+                height: 30in;
+                margin: 0;
+                font-family: 'Times New Roman', Times, serif;
+                line-height: 1.5;
+            }
+            main {
+                columns: 3;
+                text-align: justify;
+                column-gap: 1in;
+                padding-inline: 1in;
+                padding-block: .5in;
+            }
+            header {
+                text-align: center;
+                padding-block: .5in;
+                font-size: 42pt;
+            }
+            h1 {
+                font-size: 55pt;
+            }
+            h1, h2, h3, h4, p {
+                margin: 0;
+            }
+            h2, h3, h4, p, figcaption {
+                font-size: 30pt;
+                margin-top: .5em
+            }
+            h2, h3, h4 {
+                text-align: center;
+            }
+            @media screen {
+                body {
+                    border: 1px solid black;
+                    margin-inline: auto;
+                }
+            }
+            section[aria-label="Authors"] {
+                display: flex;
+                flex-direction: row;
+                width: 75%;
+                margin-inline: auto;
+                > * {
+                    flex-basis: 100%;
+                }
+            }
+            img {
+                display: block;
+                width: 100%;
+                margin-inline: auto;
+            }
+            #qr-code {
+                width: 50%;
+            }
+            figure {
+                margin: 0;
+                margin-top: 1.5em
+            }
+            figcaption {
+                margin-top: 0;
+                text-align: center;
+            }
+            header {
+                line-height: 1;
+            }
+            header > * {
+                margin-block: .5em;
+            }
+            #idea-repo-intro-flair {
+                font-weight: bold;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1>The Idea Repository</h1>
+                <p>Blogging and Note-taking for Creatives</p>
+            </hgroup>
+            <section aria-label="Project Information">
+                <p>Department of Computer Information Technology, WVNCC</p>
+                <p>CIT 237: Advanced Database Programming</p>
+                <p>6 December, 2024</p>
+            </section>
+            <section aria-label="Authors">
+                <p>Sean Lauritzen</p>
+                <p>Naedia Mccann</p>
+                <p>Austin Steen</p>
+                <p>Charlyn Woodruff</p>
+            </section>
+        </header>
+        <main>
+            <h2>Introduction</h2>
+            <p>Have you ever had an idea? Perhaps a funny joke, a cool idea for a program, or maybe even a new recipe you want to cook up? Later, you meet up with your friends or sit down to code or step into the kitchen and then - "Drats!" - you've completely forgotten your idea. If this has ever been you, then we have the solution! It's...</p>
+            <p id="idea-repo-intro-flair"><strong>The Idea Repository!</strong></p>
+            <p>You may ask yourself: "What is The Idea Repository?" The Idea Repository is a website for all of your ideas, no matter how simple or outrageous they may be. Whether it's a great recipe for rye bread or revelations about a certain European nation, the Idea Repository will store them all!</p>
+            <h2>Key Features</h2>
+            <p>Our website has several key features that may be familiar to you if you've ever used a social media site. You can create and personalize your own account, post pictures, or view the creations of others.</p>
+            <p>The Idea Repository makes it easy to find what you're looking for. Using the search bar, simply type  the keyword that you want to find. For instance, typing "recipe" in the search bar will yield all of the public ideas pertaining to recipes. If you don't have any thing particular in mind, the home page is a great way to find the newest ideas.</p>	    
+	        <p>One of the principals central to the Idea Repository is ease of use. The design for our webpage is very user-friendly and easy on the eyes. Want to write an idea? Just click on "new idea" from the navigation menu. Here you can add the title, draft a summary, and edit your content much like a word processor. If it's so ludicrous that the public might not be ready for it yet well, simply uncheck the "Public" box and it'll be for your eyes only, like a private journal.</p>
+            <h4> The Homepage and Idea creation Page <h4>
+	    <figure>
+                <img src="http://cit.wvncc.edu/idea-repository/uploads/29.png" alt="screenshot of the Idea Repository home page">
+		<img src="http://cit.wvncc.edu/idea-repository/uploads/Idea_CreateIdea.png" alt="screenshot of The idea creation page">
+            </figure>
+            <h2>Technical Details</h2>
+            <p>The web server hosting the Idea Repository runs on a Macintosh computer on the Wheeling campus. Thanks to the work of CIT Professor Doolin, this computer has been specially configured to respond to requests from the internet. When you type cit.wvncc.edu into your web browser, your request is routed directly to the Mac. The installed web server software then hands the request to the Idea Repository. Once processing is complete, the resulting page is routed back through the internet and onto your web browser.</p>
+            <p>The codebase for the Idea Repository was written in the PHP programming language and is the result of dozens of hours of diligent programming. The site is built on additional technologies that we have learned at WVNCC, including HTML, CSS, and SQL.</p>
+  	    <h3>Our Database Tables using SQL <h3>
+	    <img src="http://cit.wvncc.edu/idea-repository/uploads/Database Tables.png" alt="screenshot of The database">
+		
+	    <h2>Conclusion</h2>
+            <p>Our website seeks to better the world by making it easier for those who have great ideas to either share them with others or privately log their own thoughts. With an easy-to-use user friendly interface, the idea repository is made so that anyone can open it up in their web browser and get to logging their ideas. </p>
+            <p>Our website is also for those who may want to see what other people are thinking and what their ideas are and get inspired by others' ideas to craft their own.</p>
+            <figure>
+                <a href="http://cit.wvncc.edu/idea-repository"><img id="qr-code" src="http://cit.wvncc.edu/idea-repository/uploads/5.svg" alt="QR code linking to the Idea Repository"></a>
+                <figcaption>Visit The Idea Repository</figcaption>
+            </figure>
+        </main>
+    </body>
+</html>
