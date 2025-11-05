@@ -1,0 +1,322 @@
+
+
+/* Layout of the site.*/
+:root {
+    --nav-column-start: 1;
+    --nav-column-end: 2;
+    --main-column-start: 4;
+    --main-column-end: 5;
+    --aside-column-start: 1;
+    --aside-column-start: 6;
+    --aside-column-end: 7;
+    /* Layout when the site is in mobile. */
+    @media only screen and (max-width: 100ch) {
+        --nav-column-start: 1;
+        --nav-column-end: 8;
+        --main-column-start: 1;
+        --main-column-end: 8;
+        --aside-column-start: 1;
+        --aside-column-end: 8;
+    }
+}
+
+* {
+    /* Curse you content-box! */
+    box-sizing: border-box;
+}
+
+header, main, footer, nav {
+    overflow-x: scroll;
+}
+main form {
+    display: grid;
+    grid-template-columns: max-content max-content;
+    justify-content: center;
+    column-gap: 2em;
+    row-gap: .25em;
+    .required-symbol {
+        color: red;
+    }
+    * {
+        max-width: min(100%);
+    }
+}
+
+.table-scrolling {
+    /* Tables cannot have a scroll bar, wrap them in this */
+    overflow: scroll;
+}
+
+hgroup {
+    text-align: center;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="email"], input[type="file"], textarea {
+    border: 1px solid #444;
+}
+
+input:not(:placeholder-shown):invalid {
+    color: red;
+}
+
+input:focus {
+    color: #444 !important;
+}
+
+input[type="file"] {
+    border: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h2 {
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+h3 {
+    font-size: large;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+body{
+    font-family: 'Crimson Text';
+}
+p{
+    font-family: 'Crimson Text';
+    font-size: 1em;
+    margin-block: .5em;
+}
+h2, h3, h4, h5{
+    font-family: 'PT Sans';
+}
+
+section {
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+}
+td:hover {
+    background-color: #284B63;
+    color:white;
+}
+body {
+    margin: 0;
+    font-family: "PT Sans", sans-serif;
+    box-sizing: border-box;
+    overflow-x: scroll;
+    min-width: min-content;
+    display: grid;
+    /*grid-template-columns: [viewport-start] 1em [container-start] 30ch 1em 1fr 1em [right-col-start] auto [right-col-end] 1em [container-end] [viewport-end];*/
+    grid-template-columns: [viewport-start] 1em 30ch 1em 1fr 1em auto 1em [viewport-start];
+    grid-template-rows: auto minmax(100vh, auto) auto;
+    position: relative;
+
+    > nav, > main, > aside {
+        background-color: white;
+        box-shadow: 0px 5px rgba(53, 53, 53, 1), 0px 0px 10px rgba(40, 75, 99, 1);
+        padding: 1em;
+        margin-inline: 1em;
+        
+    }
+    > nav {
+        grid-column-start: var(--nav-column-start);
+        grid-column-start: var(--nav-column-end);
+        position: fixed;
+        width: 30ch;
+        height: 98vh;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        padding-top: 10em;
+        box-sizing: border-box;
+	border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        a {
+            padding: .5em;
+            text-decoration: none;
+            color: #444;
+        }
+        img {
+            display: inline;
+            height: 2em;
+            width: 2em;
+        }
+    }
+    > main {
+        min-height: 100vh;
+        margin-inline: auto;
+        line-height: 1.5;
+        grid-column-start: var(--main-column-start);
+        grid-column-end: var(--main-column-end);
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        padding-inline: max((100% - 90ch) / 2, 1em);
+        h2 {
+            text-align: center;
+        }
+    }
+    > aside {
+        grid-column-start: var(--aside-column-start);
+        grid-column-end: var(--aside-column-end);
+	border-bottom-right-radius: 1em;
+        border-bottom-left-radius: 1em;
+        margin: 0;
+    }
+    > footer {
+        background-color: #ddd;
+        padding-inline: 2em;
+        padding-block: 2em;
+        text-align: center;
+        border-top: 1px solid #707070;
+        grid-column-start: 1;
+        grid-column-end: 8;
+        text-align: center;
+        background-color: var(--indigo-dye);
+        color: white;
+        padding: 1em;
+        margin-top: 1em;
+        z-index: 2;
+        position: relative;
+    }
+}
+body:has(aside) {
+    grid-template-columns: 1em 30ch 1em 1fr 1em 30ch 1em;
+}
+
+
+/* Mobile-only styles. */
+@media only screen and (max-width: 100ch) {
+    header {
+        display: block !important;
+    }
+    h1 {
+        text-align: center !important;
+    }
+    search {
+        margin-inline: auto;
+    }
+    body {
+        display: block;
+    }
+    body > nav {
+        position: relative;
+        height: auto;
+        width: 100vw;
+        margin: 0;
+        padding: 1em;
+        background-color: #eee;
+        > ul {
+            display: flex;
+            flex-direction: row;
+            flex-shrink: 1;
+            li {
+                display: flex;
+                flex-direction: column;
+                flex-basis: 100%;
+                padding: 0.5em;
+                a {
+                    padding-block: 0;
+                    width: 100% !important;
+                    text-align: center;
+                }
+            }
+        }
+    }
+    body > nav, body > main, body > aside {
+        border-radius: 0;
+        box-shadow: none;
+    }
+    main form {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+main nav, aside nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    a {
+        background-color: var(--indigo-dye);
+        color: white;
+        flex-basis: 100%;
+        padding: .35em;
+        border-radius: .5em;
+    }
+}
+/*some profile styling:*/
+.profileContent{ 
+    text-align: center;
+}
+#profileName{
+    font-family: 'PT Sans';
+    font-size: 1.6em;
+    text-align: center;
+    font-variant:small-caps;
+    border-top: 3px solid var(--indigo-dye);
+    
+}#profileUsername{
+    font-family: 'PT Sans';
+    font-size: 2em;
+    font-weight: bold; 
+    font-variant: small-caps;
+}
+#profileName, #profileUsername{
+    width: 100%;
+    margin: 0;
+    
+}
+#profileJoined{
+    border-bottom: 3px solid var(--indigo-dye);
+}#profileBio{
+    width: 90%;
+    margin: auto;
+    border: 3px solid var(--indigo-dye);
+    box-shadow: 0px 0px 5px black;
+    margin-top: 15px;
+    border-radius: 15px; 
+    padding: 15px;
+}#bio{
+    text-align: center;
+}#profileBanner img{
+    width: 300px;
+    
+    border-radius: 20%;
+    border: 3px solid var(--indigo-dye);
+    box-shadow: 0px 0px 5px black;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+   
+}
+
+p:has(a[href="http://cit.wvncc.edu/idea-repository/rss-feed.php"]) {
+    margin-block: 1em;
+    font-weight: bold;
+    font-family: var(--sahitya);
+    a {
+        color: #ee802f;
+        background-color: #183b52;
+        padding: .4em;
+        border-radius: .4em;
+    }
+    .fa {
+        margin-left: .25em;
+    }
+}
+
+#profile-ideas {
+    margin-top: .75em;
+    margin-bottom: .25em;
+    text-align: center;
+}

@@ -1,0 +1,95 @@
+/*
+    Styles for displaying ideas.
+*/
+
+/* Idea feed, contains .idea-preview as children*/
+.ideas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(40ch, 100%), 1fr));
+    align-content: stretch;
+    grid-gap: 1em;
+}
+
+/* Clickable idea thumbnail */
+.idea-preview {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1em;
+    box-shadow: 0px 0px 4px black;
+    a {
+        text-decoration: none;
+        color: #313;
+    }
+    p {
+        box-sizing: border-box;
+        font-family: "Crimson Text";
+        margin-block: .25em;
+    }
+    img {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+        padding-inline: 0;
+        border-top: 1px solid #313;
+        max-height: 10em;
+        object-fit: cover;
+    }
+    a:has(img) {
+        display: block;
+        padding-inline: 0;
+        max-height: 100%;
+    }
+    hr {
+        margin-top: auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    > * {
+        padding-inline: 1em;
+    }
+    header {
+        text-align: center;
+        padding-block: 0.25em;
+        h3 {
+            margin: 0;
+            a {
+                font-weight: bold;
+                font-variant:small-caps;
+                font-family: "PT Sans";
+            }
+        }
+    }
+}
+
+/* Detailed idea view. */
+#idea {
+    display: block;
+    background-color: white;
+    margin-block: 1em;
+    img {
+        margin-bottom: 1em;
+        height: auto;
+    }
+}
+
+article, form[action="edit-idea.php"], form[action="epiphany.php"] {
+    h1 {
+        font-size: large;
+        font-weight: bold;
+    }
+    ul li, ol li {
+        padding-left: 1em;
+    }
+    ul {
+        list-style: disc inside;
+    }
+    ol {
+        list-style: decimal inside;
+    }
+}
+
+form[action="edit-idea.php"], form[action="epiphany.php"] {
+    display: flex;
+    flex-direction: column;
+}
